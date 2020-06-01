@@ -1,0 +1,32 @@
+<view class="box">
+  <view class="shopName">
+    <image src="{{shopInfo.logImage}}"></image>
+    <text class="name">{{shopInfo.shopName}}</text>
+  </view>
+  <view class="background">
+    <text class="title">门头照片</text>
+    <view wx:for="{{shopImage}}" wx:key="*this" >
+      <image class="image" wx:for="{{item}}" wx:for-item="image" src="{{image}}"></image>
+    </view>
+  </view>
+  <view class="background">
+    <text class="title">商家资质</text>
+    <view wx:for="{{liceseList}}" wx:key="*this" >
+      <image class="image" wx:for="{{item}}" wx:for-item="image" src="{{image}}"></image>
+    </view>
+  </view>
+  <view class="background shopMsg">
+    <view>
+      <text>商家品类</text>
+      <text>{{shopInfo.shopType}}</text>
+    </view>
+    <view>
+      <text>商家电话</text>
+      <text>{{shopInfo.phone}}</text>
+    </view>
+    <view>
+      <text>营业时间</text>
+      <text>{{shopInfo.startTime}}-{{shopInfo.endTime}}</text>
+    </view>
+  </view>
+</view>

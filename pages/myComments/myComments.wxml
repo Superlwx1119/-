@@ -1,0 +1,52 @@
+<view class="box" style="height:{{windowHeight}}px">
+  <view class="myComment background">
+    <image src="{{touxiang}}"></image>
+    <view>
+      <text>全部评价</text>
+      <text>{{ListTotal}}</text>
+    </view>
+    <view>
+      <text>好评</text>
+      <text>{{goodReview}}</text>
+    </view>
+    <view>
+      <text>中评</text>
+      <text>{{mediumReview}}</text>
+    </view>
+    <view>
+      <text>差评</text>
+      <text>{{badReview}}</text>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" class="scrollY">
+    <!-- <view class="comments background">
+      <image src="../images/goods.png"></image>
+      <view class="commenOrder">
+        <text>美的多功能电热锅 </text>
+        <text>美的多功能电热锅 1台 1500W 6L </text>
+        <text>1.5L/不锈钢色/不锈钢 </text>
+        <view>
+          <text>删除</text>
+          <text>追评</text>
+        </view>
+      </view>
+    </view> -->
+    <view wx:for="{{commentsList}}" wx:key="index" bindtap="commentDetail" data-orderId="{{item.orderId}}" data-reviewId="{{item.reviewId}}" class="comments background">
+      <image src="{{item.imagePath}}"></image>
+      <view class="commenOrder">
+        <text class="name">{{item.goodsName}}</text>
+        <text class="name">{{item.goodsSketch}}</text>
+        <text>{{item.skuName}}</text>
+        <view>
+          <!-- <text bindtap="deleteComment" data-reviewId="{{item.reviewId}}">删除</text> -->
+          <!-- <text>追评</text> -->
+          <image wx:if="{{item.goodsLevel == 50}}" src="../images/goodFlower.svg"></image>
+          <image wx:if="{{item.goodsLevel == 30}}" src="../images/badFlower.svg"></image>
+          <image wx:if="{{item.goodsLevel == 10}}" src="../images/badFlower.svg"></image>
+          <text>{{item.goodsLevelName}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  
+</view>

@@ -1,0 +1,450 @@
+/* pages/goodsDetail/goodsDetail.wxss */
+.box{
+  background:rgba(245,245,245,1);
+}
+.banner{
+  width: 100vw;
+  height: 672rpx;
+  display: block;
+}
+.goodsMsg{
+  overflow: hidden;
+  background: white;
+  /* height: 816rpx; */
+  /* padding: 28rpx 32rpx ; */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28rpx;
+}
+.goodsMsg>.name{
+  font-size:32rpx;
+  flex: 1;
+  font-family:PingFang SC;
+  font-weight:500;
+  line-height:44rpx;
+  color:rgba(51,51,51,1);
+}
+.goodsMsg>.introduce{
+  flex: 1;
+  font-size:24rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:44rpx;
+  color:rgba(102,102,102,1);
+}
+.oldPrive{
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(153,153,153,1);
+  text-decoration: line-through;
+}
+.activity{
+  display: flex;
+  justify-content: flex-start;
+}
+.activity text{
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(255,86,66,1);
+  border:1px dashed rgba(255,86,66,1);
+  margin-right: 12rpx;
+}
+.newPrice{
+  font-size:32rpx;
+  font-family:PingFang SC;
+  font-weight:500;
+  line-height:34rpx;
+  color:rgba(255,86,66,1);
+}
+
+.address{
+  display: flex;
+  flex-direction: column;
+  background: white;
+  justify-content: space-around;
+  height:124rpx;
+  padding: 10rpx 32rpx;
+  font-size:24rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(51,51,51,1);
+  margin-bottom: 28rpx;
+}
+.address text{
+  color:rgba(102,102,102,1);
+}
+.imageList{
+  background: white;
+  width: 100%;
+  margin-bottom: 66rpx;
+}
+.imageList view{
+  text-align: center;
+  height:60rpx;
+  font-size:22rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:60rpx;
+  color:rgba(51,51,51,1);
+}
+.imageList image{
+  width: 750rpx;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 98rpx;
+  width: 100%;
+  background: white;
+  border-top: 1px solid rgba(204,204,204,0.5019607843137255);
+  display: flex;
+  box-sizing: border-box;
+  padding: 4rpx 0;
+}
+.route{
+  display: flex;
+  flex-direction: column;
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  text-align: center;
+  color:rgba(87,214,121,1);
+  padding: 0 56rpx;
+}
+.order{
+  color:rgba(153,153,153,1) !important;
+}
+.route image{
+  width: 54rpx;
+  height: 54rpx;
+}
+.operation{
+  display: flex;
+  background: rgba(87,214,121,1);
+  width: 344rpx;
+  height: 66rpx;
+  margin-left: 44rpx;
+  margin-top: 14rpx;
+  border-radius: 33rpx;
+}
+.operation text{
+  width: 4rpx;
+  background: white;
+  height: 46rpx;
+  margin-top: 10rpx;
+  margin-left:10rpx;
+}
+.operation button{
+  width: 160rpx;
+  background: transparent;
+  white-space: nowrap;
+  text-align: left;
+  font-size:24rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:34rpx;
+  color:rgba(255,255,255,1);
+  padding: 8px 14px;
+}
+
+.addDetail{
+  position: relative;
+  height: 164rpx;
+  display: flex;
+  padding: 24rpx;
+}
+.addDetail image{
+  width: 164rpx;
+  height: 164rpx;
+  margin-right: 40rpx;
+}
+.addDetail .name{
+  font-size:28rpx;
+  font-family:PingFang SC;
+  font-weight:500;
+  height: 40rpx !important;
+  line-height:40rpx;
+  color:rgba(51,51,51,1);
+}
+.addDetail .specifications{
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(51,51,51,1);
+}
+
+.textSpeci{
+  font-size:24rpx !important;
+  font-family:PingFang SC !important;
+  font-weight:500 !important;
+  line-height:34rpx !important;
+  color:rgba(51,51,51,1) !important;
+}
+.number{
+  margin: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  padding:0 24rpx;
+}
+
+.numDo{
+  display: flex;
+  align-items: center;
+}
+.numDo image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.numDo text{
+  font-size: 20rpx;
+  margin: 0 15rpx;
+
+}
+
+.selected{
+  background:rgba(255,151,73,0.3);
+  border:1px solid rgba(255,151,73,1);
+  border-radius:6rpx;
+  box-sizing: border-box;
+  color:rgba(255,151,73,1) !important;
+}
+.total{
+  height: 88rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  background: white;
+  width: 100%;
+  align-items: center;
+}
+.img{
+  position: absolute;
+  left: 34rpx;
+  bottom: 0;
+  width: 100rpx;
+  height: 100rpx;
+}
+.img image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.img text{
+  position: absolute;
+  display: inline-block;
+  width: 24rpx;
+  height: 24rpx;
+  background:rgba(255,1,1,1);
+  border-radius: 50%;
+  right: 14rpx;
+  top: 14rpx;
+  font-size:16rpx;
+  text-align: center;
+  color: white;
+}
+.pay{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 88rpx;
+  width: 220rpx;
+  font-size:32rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:88rpx;
+  color:rgba(255,255,255,1);
+  background:rgba(87,214,121,1);
+  text-align: center;
+}
+.finPrice{
+  text-indent: 164rpx;
+  font-size:40rpx;
+  font-family:PingFang SC;
+  font-weight:600;
+  line-height:56rpx;
+  color:rgba(51,51,51,1);
+}
+.befPrice{
+  font-size:24rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:34rpx;
+  text-decoration: line-through;
+  margin-left: 8rpx;
+  color:rgba(153,153,153,1);
+}
+
+.goodsMsg>.name{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  font-size:28rpx;
+  max-width: 280rpx;
+  font-family:PingFang SC;
+  font-weight:500;
+  line-height:40rpx;
+  color:rgba(51,51,51,1);
+  white-space: nowrap;
+}
+.goodsMsg>.introduce{
+  flex: 1;
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(102,102,102,1);
+}
+.activity{
+  display: flex;
+  justify-content: flex-start;
+}
+.activity text{
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(255,86,66,1);
+  padding: 0 6rpx;
+  border:1px dashed rgba(255,86,66,1);
+  margin: 6rpx;
+  margin-right: 12rpx;
+}
+
+.prive{
+  position: relative;
+}
+.prive view{
+  width: 92rpx;
+  height: 44rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background:rgba(87,214,121,1);
+  border-radius: 22rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.prive image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.prive view text{
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(255,255,255,1);
+}
+.prive view text:last-child{
+  width: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  top: -12rpx;
+  right: 0;
+  background:rgba(255,1,1,1);
+  border-radius:50%;
+  font-size:16rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:22rpx;
+  color:rgba(255,255,255,1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number{
+  margin: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  padding:0 24rpx;
+}
+
+.numDo{
+  display: flex;
+  align-items: center;
+}
+.numDo image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.numDo text{
+  font-size: 20rpx;
+  margin: 0 15rpx;
+
+}
+
+
+.selectSku{
+  /* margin-top: 46rpx; */
+  padding: 24rpx;
+  margin-bottom: 30rpx;
+}
+.groupOption{
+  margin: 0 20rpx;
+
+}
+.group{
+  margin: 0 20rpx;
+}
+.group>text{
+  font-size:24rpx !important;
+  font-family:PingFang SC !important;
+  font-weight:500 !important;
+  line-height:34rpx !important;
+  color:rgba(51,51,51,1) !important;
+}
+.groupOption text{
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(153,153,153,1);
+  background:rgba(229,229,229,0.3);
+  border-radius:6rpx;
+  margin-right: 24rpx;
+  padding: 6rpx 10rpx;
+}
+.activieOption{
+  height:40rpx;
+  background:rgba(255,151,73,0.3);
+  border:2px solid rgba(255,151,73,1);
+  opacity:1;
+  border-radius:6rpx;
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(255,151,73,1);
+}
+.textSpeci{
+  font-size:24rpx !important;
+  font-family:PingFang SC !important;
+  font-weight:500 !important;
+  line-height:34rpx !important;
+  color:rgba(51,51,51,1) !important;
+}
+.addCar{
+  width:560rpx !important;
+  height:88rpx;
+  background:rgba(87,214,121,1);
+  border-radius:44rpx;
+  font-size:32rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:54rpx;
+  color:rgba(255,255,255,1);
+  position: absolute;
+  bottom: 54rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}

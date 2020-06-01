@@ -1,0 +1,129 @@
+.box{
+  background:rgba(245,245,245,1);
+  height: 100vh;
+  padding-bottom: 120rpx;
+  padding-top: 24rpx;
+  box-sizing: border-box;
+}
+.noAddress{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.noAddress image{
+  width: 252rpx;
+  height: 188rpx;
+}
+.noAddress text{
+  font-size:28rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:40rpx;
+  color:rgba(153,153,153,1);
+}
+.background{
+  background:rgba(255,255,255,1);
+  box-shadow:0px 0px 14rpx rgba(204,204,204,0.2);
+  border-radius:16rpx;
+  padding: 28rpx;
+  width: 686rpx;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 24rpx;
+}
+.noAddressBox{
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%,-50%);
+}
+.addAddress{
+  position: fixed;
+  bottom: 74rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30rpx;
+  width: 560rpx !important;
+  height: 88rpx;
+  background:rgba(87,214,121,1);
+  opacity:1;
+  border-radius:44rpx;
+  color: white;
+  font-size:32rpx;
+  font-family:PingFang SC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  font-weight:400;
+}
+
+.addressList{
+  display: flex;
+  align-items: center;
+  height: 118rpx;
+}
+.msg{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(197,197,197,1);
+
+}
+.msg view {
+  display: flex;
+  align-items: center;
+  height: 46rpx;
+}
+.customerName{
+  font-size:28rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:34rpx;
+  color:rgba(51,51,51,1);
+}
+.phone{
+  font-size:24rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  display: inline-block;
+  margin: 0 16rpx;
+  color:rgba(153,153,153,1);
+}
+.moren{
+  width:60rpx;
+  height:28rpx;
+  border:1px solid rgba(255,86,66,1);
+  border-radius:14rpx;
+  font-size:18rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:22rpx;
+  color:rgba(255,86,66,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.address{
+  font-size:24rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(102,102,102,1);
+}
+
+.edit{
+  font-size:22rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 72rpx;
+  text-indent: 28rpx;
+  color:rgba(153,153,153,1);
+}

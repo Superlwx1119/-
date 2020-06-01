@@ -1,0 +1,21 @@
+{
+  "extEnable": true,
+  "extAppid": "wx1d9521fc976e6578",
+  "directCommit": false,
+  "ext": {
+    "name": "wechat",
+    "shopId":"d274ef26f5385a13b7104dcb7691a62c",
+    "baseUrl":"https://sapp.csgxcf.com/smcGateway",
+    "attr": {
+      "host": "open.weixin.qq.com",
+      "users": [
+        "user_1",
+        "user_2"
+      ]
+    }
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

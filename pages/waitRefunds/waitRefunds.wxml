@@ -1,0 +1,72 @@
+<view class="box" >
+  <view class=" background" wx:for="{{refundDetail.refundGoodsListToCus}}" wx:key="index">
+    <text class="waitTitle" wx:if="{{index == 0}}">{{refundDetail.statusValue ? refundDetail.statusValue : ''}}</text>
+    <view class="goodsMsg">
+      <image src="{{item.imagePath}}"></image>
+      <view class="goodsText">
+        <text>{{item.goodsName}}</text>
+        <text> </text>
+        <text>{{item.skuName}}</text>
+        <view class="reNum">
+          <text>退款数量</text>
+          <view>
+            <!-- <image bindtap="reduction" data-index="{{index}}"  src="../images/Reduction.svg"></image> -->
+            <text id="number">x{{item.refundsNumber}}</text>
+            <!-- <image bindtap="add"  data-index="{{index}}" data-able="{{item.refundableNum}}" src="../images/add.png"></image> -->
+          </view>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+  <view class="money background">
+    <view>预计退款：¥{{refundDetail.applyMoney}}</view>
+    <text>最多可退{{refundDetail.applyMoney}}元，具体以和商家协商为准，退款退还至原支付账户。</text>
+  </view>
+  <view class="refundMsg background">
+    <view class="type group">
+      <text>退款类型</text>
+      <view>
+        <text>{{refundDetail.refundsTypeValue ? refundDetail.refundsTypeValue : ''}}</text>
+        <image src="../images/right.svg"></image>
+      </view>
+    </view>
+    <view class="typeCheck" wx:if="{{typeValue == '10'}}">
+      <view wx:for="{{typeSend}}" wx:key="index" bindtap="selectSend" data-index="{{index}}">
+        <image src="{{item.value == sendValue ? '../images/radio.svg' : '../images/radio-active.svg' }}"></image>
+        <text class="{{item.value == sendValue ? 'typeSelected' : ''}}">{{item.text}}</text>
+      </view>
+      <!-- <view>
+        <image src="../images/radio-active.svg"></image>
+        <text>买家自送</text>
+      </view> -->
+    </view>
+    <view class="reson group">
+      <text>退款原因</text>
+      <view>
+        <text>{{refundDetail.reason}}</text>
+        <image src="../images/right.svg"></image>
+      </view>
+    </view>
+    <view class="note group">
+      <text>退款说明</text>
+      <input value="{{refundDetail.explains}}"  placeholder="选填，最多100字"></input>
+    </view>
+    <view class="upload" wx:if="{{refundDetail.imagePath != ''}}">
+      <text>退款凭证</text>
+      <view class="upFiles">
+          <image mode="aspectFill" bindtap="showBigImg" data-index="{{index}}" wx:for="{{refundDetail.imagePath}}" wx:key="index"  src="{{item}}"></image>
+          <!-- <view class="doUpload" bindtap="selectPhoto" wx:if="{{fileList.length<5}}">
+            <image src="../images/Camera.svg"></image>
+            <text>上传照片</text>
+            <text>(最多5涨)</text>
+          </view> -->
+      </view>
+    </view>
+    <view class="submitMsg group">
+      <text>申请时间：{{refundDetail.insTime}}</text>
+      <text>退款编号：{{refundDetail.refundsId}}</text>
+    </view>
+  </view>
+  <button class="submit" wx:if="{{refundDetail.status == 1000 || refundDetail.status == 1500}}" bindtap="cancelApply" data-refundsId="{{refundDetail.refundsId}}">撤销申请</button>
+</view>

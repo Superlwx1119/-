@@ -1,0 +1,111 @@
+<!-- <mp-navigation-bar color="white" title="订单确认"  background="#57D679" back="{{true}}"></mp-navigation-bar> -->
+<view class="box">
+  <view class="sendType">
+    <view class="shopName">{{shopName}}</view>
+    <view class="shopHi">欢迎光临，很高兴为您服务。</view>
+    <view class="shopSend">
+      <view bindtap="selectType" data-type="shop" class="{{currTag == 'shop' ? 'sendSelected' : ''}}">
+        <image src="{{curImg}}"></image>
+        <text>门店自提</text>
+      </view>
+      <view bindtap="selectType" data-type="send" class="{{currTag == 'send' ? 'sendSelected' : ''}}">
+        <image src="{{othImg}}"></image>
+        <text>外卖配送</text>
+      </view>
+    </view>
+    <view class="address" wx:if="{{currTag == 'send'}}">
+      <text>收货地址</text>
+      <view class="addAddress" >
+        <text wx:if="{{!address.address}}">暂无收货地址</text>
+        <button wx:if="{{!address.address}}" bindtap="add">点击填写</button>
+      </view>
+    </view>
+    <view class="phone address" wx:else >
+      <text>联系电话</text>
+      <view class="addAddress">
+        <input bindinput="bindKeyInput" data-type="phone" style="font-size:24rpx" value="{{phone}}" placeholder="请填写您的手机号码"></input>
+        <!-- <text>请填写您的手机号码</text> -->
+        <!-- <button bindtap="addPhone">自动填写</button> -->
+      </view>
+    </view>
+    <view class="hasAddress"  bindtap="add" wx:if="{{currTag == 'send' && address.address}}">
+      <view class="addressMsg">
+        <view>
+          <text>{{address.customerName}}</text>
+          <text>{{address.phone}}</text>
+        </view>
+        <text>{{address.address}}</text>
+        <text class="tips" wx:if="{{orderInfo.scope == 20}}">不在配送范围，请重新选择地址。</text>
+      </view>
+      <image src="../images/right.svg"></image>
+    </view>
+  </view>
+  <view class="goodsList" >
+    <text>商品明细</text>
+    <view class="listItem" wx:for="{{orderInfo.orderGoods}}" wx:key="index">
+      <text class="name">{{item.goodsName}}</text>
+      <text>x{{item.buyNumber}}</text>
+      <text class="oldPrice" style="{{item.oldPrice == item.actualPrice ? 'color:white':''}}">￥{{item.oldPrice}}</text>
+      <text>￥{{item.actualPrice}}</text>
+    </view>
+    <view class="subtotal">
+      <text class="num">共{{orderInfo.buySum}}件</text>
+      <text class="text">小计:</text>
+      <text class="money">￥{{orderInfo.price}}</text>
+    </view>
+  </view>
+  <view class="message goodsList">
+    <text>买家留言</text>
+    <textarea maxlength="100" auto-height="true" bindinput="bindKeyInput" data-type="note" value="{{note}}" placeholder="请输入您想要告知卖家的内容"></textarea>
+    <!-- <input bindinput="bindKeyInput" data-type="note" value="{{note}}" placeholder="请输入您想要告知卖家的内容"></input> -->
+  </view>
+  <view class="sales goodsList">
+    <view class="selectCard">
+      <view class="cardText">
+        <text>优惠券</text>
+        <image src="../images/quan.svg"></image>
+      </view>
+      <view class="card" bindtap="showCoupon">
+        <text class="{{orderInfo.couponMoney ? 'jianqian':''}}">{{orderInfo.couponMoney ? '-￥'+orderInfo.couponMoney : '选择优惠券'}}</text>
+        <image src="../images/right.svg"></image>
+      </view>
+    </view>
+    
+    <view class="cardText manJian">
+      <text>满减</text>
+      <text class="jianqian">-￥{{orderInfo.reductionMoney}}</text>
+    </view>
+  </view>
+  <view class=" message goodsList">
+    <text class="name">配送费</text>
+    <text class="sendF">{{orderInfo.freightFee == 0 ? '免费' : '￥'+ orderInfo.freightFee}}</text>
+  </view>
+  <view class="total">
+    <text>￥{{orderInfo.totalFee}}</text>
+    <view bindtap="submitOrder">去支付</view>
+  </view>
+  <mp-halfScreenDialog 
+    bindbuttontap="buttontap"
+    show="{{show}}"
+    closabled="{{false}}"
+    maskClosable="{{true}}" 
+  > 
+    <view slot="title">选择优惠券</view>
+    <view slot="desc" style="height:600rpx">
+      <view bindtap="useCoupon" data-index="{{index}}" data-couponCustomerId="{{item.couponCustomerId}}" class="coupon" wx:for="{{couponList}}" wx:key="couponId">
+        <image mode="widthFix" src="../images/bigCoupon.svg"></image>
+        <image wx:if="{{currentCou == index}}" class="currentCou" catchtap="cancelCou" data-index="{{index}}" src="../images/bingo.svg"></image>
+        <image wx:else class="currentCou" catchtap="useCoupon" data-index="{{index}}" data-couponCustomerId="{{item.couponCustomerId}}" src="../images/bingoEmpty.svg"></image>
+        <view>
+          <view class="moneyAndName">
+            <text>￥</text>
+            <text class="num">{{item.couponMoney}}</text>
+            <text>{{item.couponName}}</text>
+          </view>
+          <text class="time">有效期 {{item.startTime}}-{{item.endTime}}</text>
+        </view>
+        <text class="getIt"  >使 用</text>
+      </view>
+    </view>
+  </mp-halfScreenDialog>
+</view>

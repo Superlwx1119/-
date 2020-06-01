@@ -1,0 +1,21 @@
+<view wx:if="{{canIUse}}" class="login_contianer"> 
+    <view class='header'>
+        <text>欢迎光临供销小店</text>
+        <text>打通农资供应最后一公里</text>
+        <image mode="widthFill" src='../images/logo.svg'></image>
+    </view>
+ 
+    <view class='content'>
+       <!-- <view class="step_item"><image src='../images/step1.png'></image></view>
+       <view class="step_arr"><image src='../images/arrow.png'></image></view>
+       <view class="step_item"><image src='../images/step2.png'></image></view>
+       <view class="step_arr"><image src='../images/arrow.png'></image></view>
+       <view class="step_item"><image src='../images/step3.png'></image></view> -->
+    </view>
+    <!-- <view class="notice_tip">欢迎体验诚丰便利无人货架</view> -->
+    <button class='bottom' type='primary'  open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+       立即体验
+    </button>
+</view>
+ 
+<view wx:else>请升级微信版本</view>

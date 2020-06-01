@@ -1,0 +1,52 @@
+<mp-navigation-bar color="white" title="个人中心"  background="#57D679" back="{{false}}"></mp-navigation-bar>
+<view class="box" style="height:calc(100vh - {{top}}px);" >
+	<view class="head">
+		<view class="huxing">
+			
+		</view>
+		<view class="mine">
+			<image src="{{touxiang}}"></image>
+			<text class="myName">{{nickName}}</text>
+		</view>
+	</view>
+	<view class="body background">
+		<text>我的订单</text>
+		<view class="muOrder">
+			<view bindtap="toOrder" data-type="current">
+				<image src="../images/curOrder.svg"></image>
+				<text>当前订单</text>
+			</view>
+			<view bindtap="toOrder" data-type="history">
+				<image src="../images/hisOrder.svg"></image>
+				<text>历史订单</text>
+			</view>
+			<view bindtap="toRefund">
+				<image src="../images/refund.svg"></image>
+				<text>退款售后</text>
+			</view>
+		</view>
+	</view> 
+	<view class="otherServe background">
+		<text>其他服务</text>
+		<view bindtap="toCoupon">
+			<image src="../images/myCoupon.svg"></image>
+			<text>优惠卡券</text>
+			<image class="right" src="../images/right.svg"></image>
+		</view>
+		<view bindtap="toComment">
+			<image src="../images/comment.svg"></image>
+			<text>我的评价</text>
+			<image class="right" src="../images/right.svg"></image>
+		</view>
+		<view bindtap="toAddress">
+			<image src="../images/myAddress.svg"></image>
+			<text>我的地址</text>
+			<image class="right" src="../images/right.svg"></image>
+		</view>
+		<view bindtap="toQualification">
+			<image src="../images/zizhi.svg"></image>
+			<text>店铺信息</text>
+			<image class="right" src="../images/right.svg"></image>
+		</view>
+	</view>
+</view>

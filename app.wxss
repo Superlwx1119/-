@@ -1,0 +1,11 @@
+/**app.wxss**/
+@import './weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+/* .weui-half-screen-dialog__hd{
+  display: none !important;
+} */
+.selectSize .weui-half-screen-dialog__hd{
+  display: none !important;
+}
+.upFiles .weui-uploader__hd{
+  display: none !important;
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="24" viewBox="0 0 68 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#pattern);
+      }
+    </style>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 330 118">
+      <image width="330" height="118" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAB2CAYAAACu5tpnAAAACXBIWXMAAC4jAAAuIwF4pT92AAAEZ0lEQVR4nO3cvW7bZhSA4eOie1ygU5c4QNfC6RXYXTk07h2kG7fmEpyxm7txqzN0dxeulfcCsfcCSfcO9hWooEikKtr4kKKiSOLzAIKB+CfiR+nlxx/xYD6fBwDv94mxAXiYUAIkhBIgIZQACaEESAglQEIoARKfrnWAquIwIp4adPbIXZT1zajFqYrmPXHoRbFR49fbkvGhrIrTiHgeEc3Xx5sdC/jgbtew8b+IiBOrasOqovn/riPiKiIuo6zvVn0Cq38yp91KegGw/8r6YNQyVoWPv31894telfX5Ks9ktVBWRTOD/HnbRwbW5Lso66uV/lQ7oXhtRWyNZg/hLMr67ZAnNPxkTlWciyQT82LE4o75XdbvOCJuug1Yb8NmlGaSTNc3UdazQUvfHr//zWtmK90uzqv0PG7Zf0ZZFUfdMUmYoqtBs5D2Z1fbXWcTjhcneHoasuvd/NFHViET1bz2Z1EVZ+nitzPJmffL1nvWratUv13vdjb5ZsIDCsuuu72r2btdt/Ya4tPumKQrQXbHr1HW6cav73WUDkjDP07EcG88W2zkkmOVfXe9e01PAXZQ2re+oTy29oE9lZ6kc1MMYOqOsuVf700xYGp+/8Uq331CCR+UUE6CXW+AhFACJIQSICGUAAmhBEgIJUBCKAESQgljlHX7YK8JJUBCKAESQgmQEEqAhFACJIQSICGUAAn3o4QxqsLwTYAZJUBCKAESQgmQEEqAhFACJIQSICGUAAmhhDHcj3IShBIgIZQACaEESAglQEIoARJCCZAQSoCEUAIk3LgXxnDj3kkwowRICCVAQigBEkIJkBBKgIRQAiSEEiAhlDCGG/dOglACJIQSICGUAAmhBEgIJUBCKAESQgmQcD9KGMP9KCfBjBIgIZQACaEESAglQEIoARJCCZAQSoCEUAIkhBLGcOPeSRBKgIRQAiSEEiAhlAAJoQRICCVAQigBEm7cC2O4ce8kmFECJIQSICGUAAmhBEgIJUBCKAESQgmQEEoY49sf2wd7zQXnMMYXXxm+3XeTLYEZJTB1d9ny9w3l9dRHEthbs2zB+obyymsE/uPP+OuPu8Uj4tbw7KT7KGuhhDW7j4iXEfEkyvooPv/ys8WjrJ8u/q393r1B3xm92nYwn8/7LVBVXETEDxMYOHifZtZ4FmX99sERqoqj7g14bCS33pN0fQ48mXNuS8mENZE87fOm6n7m1O741nvZa30OmlHGYkvZ7F683tNBg4d8HWWdXkbyL+3M8o1R3UrXUdanfZ/YsMuD2hfK9/swSjDAq8GRjHczy58M9NZpD6EMMPw6yrK+XGxdmzN+MA0XI5ZyzO+yfq+6QyjptZPLhu16L6uKw4h40T0eWaHsrbI+GLVoVXHnPfLRNRO7530uBfo/q3+EsS3yeXc2/Kx7NMcwH+/IwEEf6/iwRbPbfmK0N+66G/vLlQ6dLFl9RgkwET7rDZAQSoCEUAIkhBIgIZQACaEESAglQEIoAR4SEX8DnpDLBCyXRocAAAAASUVORK5CYII="/>
+    </pattern>
+  </defs>
+  <rect id="供销小店icon-17" class="cls-1" width="68" height="24"/>
+</svg>

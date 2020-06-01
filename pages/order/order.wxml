@@ -1,0 +1,71 @@
+<mp-navigation-bar color="white" title="订单"  background="#57D679" back="{{false}}"></mp-navigation-bar>
+<view style="height:calc(100vh - {{top}}px);" >
+  <view class="box">
+    <mp-tabs 
+      tabs="{{tabs}}" 
+      tab-class="tabs"
+      activeTab="{{activeTab}}" 
+      tab-underline-color="#57D679"
+      tab-inactive-text-color="#999999"
+      swiperClass="swiperClass"
+      bindtabclick="onTabCLick"
+      bindchange="onChange"
+      activeClass="tab-bar-title__selected">   
+    </mp-tabs>
+    <view class="tab-content" style="height:calc(100vh - {{top}}px - 70rpx);"  wx:if="{{activeTab == 0}}" >
+      <view class="noOrder" style="height:calc(100vh - {{top}}px - 70rpx);" wx:if="{{currentList.length == 0}}">
+        <image src="../images/noOrder.svg"></image>
+        <text>暂无订单</text>
+        <text>赶紧去选购商品吧~</text>
+      </view>
+      <scroll-view wx:else scroll-y="true" class="current" style="height:calc(100vh - {{top}}px - 70rpx);">
+        <view wx:for="{{currentList }}" wx:key="orderId" class="orderList {{item.status == 300 ? 'noGet':''}} {{item.status == 100 ? 'noPay':''}}">
+          <view class="orderState">
+            <text>{{item.insTime}}</text>
+            <view>{{item.statusValue}}</view>
+          </view>
+          <view class="orderMsg" bindtap="toDetail" data-orderId="{{item.orderId}}">
+            <view>
+              <image wx:for="{{item.imagePath}}" wx:if="{{imgIndex<=2}}" wx:for-index="imgIndex" wx:key="*this" wx:for-item="image" src="{{image}}"></image>
+            </view>
+            <view class="orderPrice">
+              <text>￥{{item.price}}</text>
+              <text>共{{item.goodsNumber}}件商品</text>
+            </view>
+          </view>
+          <text wx:if="{{item.status == 300}}" class="orderCode">提货码：2012541</text>
+          <text wx:if="{{item.status == 100}}" data-orderId="{{item.orderId}}" bindtap="toPay" class="toPay">付款</text>
+        </view>
+      </scroll-view>
+      
+    </view>
+    <view class="tab-content" wx:if="{{activeTab == 1}}" style="height:calc(100vh - {{top}}px - 70rpx);">
+      <view class="noOrder" style="height:calc(100vh - {{top}}px - 70rpx);" wx:if="{{historyList.length == 0}}">
+        <image src="../images/noOrder.svg"></image>
+        <text>暂无订单</text>
+        <text>赶紧去选购商品吧~</text>
+      </view>
+      <scroll-view wx:else scroll-y="true" class="current" style="height:calc(100vh - {{top}}px - 70rpx);">
+        <view wx:for="{{historyList }}" wx:key="orderId" class="historyList {{item.status == 400 ? 'finish':''}}">
+          <view class="orderState history">
+            <text>{{item.insTime}}</text>
+            <view class="{{item.status == 400 ? 'complete':''}} {{item.status == 500 ? 'cancel':''}}">{{item.statusValue}}</view>
+          </view>
+          <view class="orderMsg" bindtap="toDetail" data-orderId="{{item.orderId}}">
+            <view>
+              <image wx:for="{{item.imagePath}}" wx:for-index="imgIndex" wx:if="{{imgIndex<=2}}" wx:key="*this" wx:for-item="image" src="{{image}}"></image>
+            </view>
+            <view class="orderPrice">
+              <text>￥{{item.price}}</text>
+              <text>共{{item.goodsNumber}}件商品</text>
+            </view>
+            <view class="finishBtn" wx:if="{{item.status == 400}}">  
+              <view catchtap ="toRefund" data-orderId="{{item.orderId}}">退款</view>
+              <view catchtap ="toComments" data-reviewId="{{item.reviewId}}" data-orderId="{{item.orderId}}">评价</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

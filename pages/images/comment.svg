@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #2ba3ff;
+      }
+
+      .cls-3 {
+        fill: #57d679;
+      }
+    </style>
+  </defs>
+  <g id="组_299" data-name="组 299" transform="translate(66 -584)">
+    <rect id="矩形_318" data-name="矩形 318" class="cls-1" width="20" height="20" transform="translate(-66 584)"/>
+    <g id="组_293" data-name="组 293" transform="translate(-66 584)">
+      <path id="路径_3" data-name="路径 3" class="cls-2" d="M12.638,8.238a.8.8,0,1,0,.83.8A.814.814,0,0,0,12.638,8.238Z" transform="translate(0 0)"/>
+      <path id="路径_4" data-name="路径 4" class="cls-2" d="M10,8.238a.8.8,0,1,0,.829.8A.815.815,0,0,0,10,8.238Z" transform="translate(0 0)"/>
+      <path id="路径_5" data-name="路径 5" class="cls-2" d="M7.361,8.238a.8.8,0,1,0,.829.8A.814.814,0,0,0,7.361,8.238Z" transform="translate(0 0)"/>
+      <path id="路径_6" data-name="路径 6" class="cls-3" d="M15.8,4.857a.324.324,0,0,1,.327.32v8.1a.324.324,0,0,1-.327.32H11.234l-.256.249L10,14.789l-.963-.945-.256-.252H4.2a.324.324,0,0,1-.327-.32v-8.1a.324.324,0,0,1,.327-.32H15.8M15.8,4H4.2A1.19,1.19,0,0,0,3,5.177v8.1A1.19,1.19,0,0,0,4.2,14.45h4.22L10,16l1.6-1.55h4.2A1.19,1.19,0,0,0,17,13.272v-8.1A1.19,1.19,0,0,0,15.8,4Z" transform="translate(0 0)"/>
+    </g>
+  </g>
+</svg>

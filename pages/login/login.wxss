@@ -1,0 +1,60 @@
+.header {
+  text-align: center;
+  padding-top: 68rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header text{
+  display: inline-block;
+}
+.header text{
+  display: inline-block;
+  margin: 10rpx 0;
+}
+.header image {
+  width: 100%;
+  margin-top: 140rpx;
+}
+.content {
+margin: auto;
+}
+button.bottom {
+  border-radius: 44rpx;
+  margin:auto;
+  height: 88rpx;
+  line-height: 58rpx;
+  width: 560rpx !important;
+  background: #57D679 !important;
+  color: #FFFFFF;
+  font-size:32rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  margin-top: 90rpx;
+}
+.login_contianer {
+height: 100vh;
+position: relative;
+}
+.step_item,.step_arr {
+font-size: 0;
+text-align: center
+}
+.step_item image{
+width: 62vw;
+height: 24vw;
+display: inline-block;
+}
+.step_arr image{
+width: 4vw;
+height: 4vw;
+padding-top: 4vw;
+display: inline-block;
+}
+.notice_tip {
+text-align: center;
+font-size: 0.9rem;
+color: #666;
+padding-bottom: 2vw;
+}

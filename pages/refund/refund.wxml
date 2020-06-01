@@ -1,0 +1,91 @@
+<view class="box" >
+  <view class="goodsMsg background" wx:for="{{applyMoneyRes}}" wx:key="index">
+    <image src="{{item.imagePath}}"></image>
+    <view class="goodsText">
+      <text>{{item.goodsName}}</text>
+      <text> </text>
+      <text>{{item.skuName}}</text>
+      <view class="reNum">
+        <text>退款数量</text>
+        <view class="num">
+          <image bindtap="reduction" data-index="{{index}}"  src="../images/Reduction.svg"></image>
+          <text>{{item.refundsNumber}}</text>
+          <image bindtap="add"  data-index="{{index}}" data-able="{{item.refundableNum}}" src="../images/add.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="money background">
+    <view>预计退款：¥{{applyMoney}}</view>
+    <text>最多可退{{applyMoney}}元，具体以和商家协商为准，退款退还至原支付账户。</text>
+  </view>
+  <view class="refundMsg background">
+    <view class="type group">
+      <text>退款类型</text>
+      <view bindtap="showType">
+        <text>{{typeValue == '' ? '请选择': typeText}}</text>
+        <image src="../images/right.svg"></image>
+      </view>
+    </view>
+    <view class="typeCheck" wx:if="{{typeValue == '10'}}">
+      <view wx:for="{{typeSend}}" wx:key="index" bindtap="selectSend" data-index="{{index}}">
+        <image src="{{item.value == sendValue ? '../images/radio.svg' : '../images/radio-active.svg' }}"></image>
+        <text class="{{item.value == sendValue ? 'typeSelected' : ''}}">{{item.text}}</text>
+      </view>
+      <!-- <view>
+        <image src="../images/radio-active.svg"></image>
+        <text>买家自送</text>
+      </view> -->
+    </view>
+    <view class="reson group">
+      <text>退款原因</text>
+      <view bindtap="showReason">
+        <text>{{reasonText}}</text>
+        <image src="../images/right.svg"></image>
+      </view>
+    </view>
+    <view class="note group">
+      <text class="tipText">退款说明</text>
+      <textarea maxlength="100" auto-height="true" value="{{note}}" bindinput="inputNote" placeholder="选填，最多100字"></textarea>
+      <!-- <input value="{{note}}" bindinput="inputNote" placeholder="选填，最多100字"></input> -->
+    </view>
+    <view class="upload">
+      <text>上传凭证</text>
+      <view class="upFiles">
+          <view class="upBox files" wx:for="{{fileList}}" wx:key="index">
+            <icon type="cancel" bindtap="deleteImg" class="closeFile" data-index="{{index}}" size="14" color="black"/>
+            <image bindtap="showBigImg" data-index="{{index}}" mode="aspectFill"   src="{{item}}"></image>
+          </view>
+          <!-- <image mode="aspectFill" wx:for="{{fileList}}" wx:key="index"  src="{{item}}"></image> -->
+          <view class="upBox">
+            <view wx:if="{{fileList.length<5}}" class="doUpload" bindtap="selectPhoto">
+              <image src="../images/Camera.svg"></image>
+              <text>上传照片</text>
+              <text>(最多5张)</text>
+            </view>
+          </view>
+          <!-- <view class="doUpload" bindtap="selectPhoto" wx:if="{{fileList.length<5}}">
+            <image src="../images/Camera.svg"></image>
+            <text>上传照片</text>
+            <text>(最多5涨)</text>
+          </view> -->
+      </view>
+    </view>
+  </view>
+  <button class="submit" bindtap="applyRefunds">提交</button>
+  <mp-actionSheet bindactiontap="typeClick" show="{{showType}}" actions="{{typeGroups}}" title="请选择退货类型"></mp-actionSheet>
+  <mp-halfScreenDialog 
+    bindbuttontap="buttontap"
+    show="{{showReason}}"
+    closabled="{{false}}"
+    maskClosable="{{true}}" 
+  > 
+    <view slot="title">选择退款原因</view>
+    <view slot="desc">
+      <view wx:for="{{reasonList}}" wx:key="index" class="reason" bindtap="selectReason" data-index="{{index}}">
+        <image src="{{reasonIndex == index ? '../images/bingo.svg' : '../images/bingoEmpty.svg'}}"></image>
+        <text>{{item.dictValue}}</text>
+      </view>
+    </view>
+  </mp-halfScreenDialog>
+</view>

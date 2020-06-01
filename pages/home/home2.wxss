@@ -1,0 +1,458 @@
+/* pages/home/home.wxss */
+.box{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.shopDetail{
+  border-bottom: 1px solid #CCCCCC;
+  flex: 1;
+}
+.radio{
+  height: 40rpx;
+  padding: 12rpx 32rpx 6rpx 32rpx;
+  display: flex;
+  /* margin-left: 650rpx; */
+  width: 750rpx;
+  animation: animation 7s infinite linear; 
+
+}
+@keyframes animation{
+  0%  { transform: translateX(100%);}
+  50%  { transform: translateX(0);}
+  100%  { transform: translateX(-100%);}
+}
+.radio image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.radio text{
+  font-size: 20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height: 40rpx;
+}
+
+.shopName{
+  display: block;
+  font-size:40rpx;
+  font-family:PingFang TC;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+  padding: 0 32rpx;
+}
+.shopHi{
+  font-size:28rpx;
+  font-family:PingFang SC;
+  color:rgba(102,102,102,1);
+  font-weight:400;
+  padding: 0 32rpx;
+}
+.shopMsg{
+  display: flex;
+  flex-direction: column;
+}
+.shopLocal{
+  display: flex;
+  justify-content: space-between;
+  font-size:24rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  padding: 0 32rpx;
+  margin-top: 24rpx;
+}
+.local{
+  display: flex;
+  align-items: center;
+}
+.local image{
+  width: 24rpx;
+  height: 24rpx;
+}
+.local text{
+  font-size:20rpx;
+  color:rgba(153,153,153,1);
+}
+.time{
+  padding: 0 32rpx;
+  font-size:24rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+
+.cataAndGoods{
+  display: flex;
+  overflow: hidden;
+  height: 813rpx;
+}
+.cata{
+  flex: 0 0 175rpx;
+  position: relative;
+  /* height: 816rpx; */
+  box-sizing: border-box;
+  padding-top: 27rpx;
+  background:rgba(245,245,245,1);
+}
+
+.goods{
+  flex: 1;
+}
+
+.scroll-view-cata{
+  height: 76rpx;
+  background:rgba(245,245,245,1);
+  border-radius:6rpx;
+  text-align: center;
+  
+}
+
+.scroll-view-cata text{
+  text-align: center;
+  font-size:28rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:76rpx;
+  color:rgba(153,153,153,1);
+}
+.cataAcitve{
+  background:rgba(87,214,121,1) !important;
+  color:white !important;
+}
+.cataAcitve text{
+  color:white !important;
+}
+.scroll-view-goods{
+  position: relative;
+  height: 164rpx;
+  display: flex;
+  padding: 24rpx;
+  border-bottom:1px solid rgba(204,204,204,0.5019607843137255);
+}
+.scroll-view-goods image{
+  height: 164rpx;
+  width: 164rpx;
+}
+.goodsMsg{
+  overflow: hidden;
+  /* height: 816rpx; */
+  display: flex;
+  flex-direction: column;
+}
+.num{
+  display: flex;
+  position: absolute;
+  right: 32rpx;
+  align-items: center;
+  bottom: 32rpx;
+}
+.num image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.num text{
+  font-size: 20rpx;
+  margin: 0 10rpx;
+}
+.goodsMsg>.name{
+  font-size:28rpx;
+  flex: 1;
+  font-family:PingFang SC;
+  font-weight:500;
+  line-height:40rpx;
+  color:rgba(51,51,51,1);
+}
+.goodsMsg>.introduce{
+  flex: 1;
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(102,102,102,1);
+}
+.activity{
+  display: flex;
+  justify-content: flex-start;
+}
+.activity text{
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(255,86,66,1);
+  padding: 0 6rpx;
+  border:1px dashed rgba(255,86,66,1);
+  margin-right: 12rpx;
+}
+.oldPrive{
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(153,153,153,1);
+  text-decoration: line-through;
+}
+.newPrice{
+  font-size:24rpx;
+  font-family:PingFang SC;
+  font-weight:500;
+  line-height:34rpx;
+  color:rgba(255,86,66,1);
+}
+.coupons{
+  padding: 0rpx 30rpx;
+}
+.couponsDetail{
+  width: 136rpx;
+  height: 48rpx;
+  position: relative;
+  display: inline-block;
+}
+.scrollX{
+  height: 48rpx;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.couponsDetail image{
+  position: absolute;
+  width: 136rpx;
+  height: 48rpx;
+  top: 0;
+  left: 0;
+}
+.couponsDetail text{
+  font-size:20rpx;
+  font-family:PingFang SC;
+  line-height:28rpx;
+  color:rgba(255,255,255,1);
+}
+.money{
+  position: absolute;
+  left: 24rpx;
+  top: 9rpx;
+}
+.getIt{
+  position: absolute;
+  right: 15rpx;
+  top: 9rpx;
+}
+.shopActivity{
+  padding: 0rpx 32rpx;
+  margin-bottom: 5rpx;
+  margin-top: -10rpx;
+}
+.shopActivity text{
+  border:1px solid rgba(255,86,66,1);
+  font-size:16rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:22rpx;
+  color:rgba(255,86,66,1);
+  padding: 4rpx;
+  margin-right: 4rpx;
+}
+
+.addDetail{
+  position: relative;
+  height: 164rpx;
+  display: flex;
+  padding: 24rpx;
+}
+.addDetail image{
+  width: 164rpx;
+  height: 164rpx;
+  margin-right: 40rpx;
+}
+.addDetail .name{
+  font-size:28rpx;
+  font-family:PingFang SC;
+  font-weight:500;
+  line-height:40rpx;
+  color:rgba(51,51,51,1);
+}
+.addDetail .specifications{
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(51,51,51,1);
+}
+
+.number{
+  margin: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  padding:0 24rpx;
+}
+
+.numDo{
+  display: flex;
+  align-items: center;
+}
+.numDo image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.numDo text{
+  font-size: 20rpx;
+  margin: 0 15rpx;
+
+}
+
+
+.selectSku{
+  /* margin-top: 46rpx; */
+  padding: 24rpx;
+  margin-bottom: 30rpx;
+}
+.groupOption{
+  margin: 0 20rpx;
+
+}
+.group{
+  margin: 0 20rpx;
+}
+.group>text{
+  font-size:24rpx !important;
+  font-family:PingFang SC !important;
+  font-weight:500 !important;
+  line-height:34rpx !important;
+  color:rgba(51,51,51,1) !important;
+}
+.groupOption text{
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(153,153,153,1);
+  background:rgba(229,229,229,0.3);
+  border-radius:6rpx;
+  margin-right: 24rpx;
+  padding: 6rpx 10rpx;
+}
+.activieOption{
+  height:40rpx;
+  background:rgba(255,151,73,0.3);
+  border:2px solid rgba(255,151,73,1);
+  opacity:1;
+  border-radius:6rpx;
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:28rpx;
+  color:rgba(255,151,73,1);
+}
+.textSpeci{
+  font-size:24rpx !important;
+  font-family:PingFang SC !important;
+  font-weight:500 !important;
+  line-height:34rpx !important;
+  color:rgba(51,51,51,1) !important;
+}
+.addCar{
+  width:560rpx !important;
+  height:88rpx;
+  background:rgba(87,214,121,1);
+  border-radius:44rpx;
+  font-size:32rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:54rpx;
+  color:rgba(255,255,255,1);
+  position: absolute;
+  bottom: 54rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.salesTips{
+  height:40rpx;
+  background:rgba(245,245,245,1);
+  font-size:20rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:40rpx;
+  color:rgba(51,51,51,1);
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 88rpx;
+}
+.total{
+  height: 88rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  background: white;
+  width: 100%;
+  align-items: center;
+}
+.img{
+  position: absolute;
+  left: 34rpx;
+  bottom: 0;
+  width: 100rpx;
+  height: 100rpx;
+}
+.img image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.img text{
+  position: absolute;
+  display: inline-block;
+  width: 24rpx;
+  height: 24rpx;
+  background:rgba(255,1,1,1);
+  border-radius: 50%;
+  right: 14rpx;
+  top: 14rpx;
+  font-size:16rpx;
+  text-align: center;
+  color: white;
+}
+.pay{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 88rpx;
+  width: 220rpx;
+  font-size:32rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:88rpx;
+  color:rgba(255,255,255,1);
+  background:rgba(87,214,121,1);
+  text-align: center;
+}
+.finPrice{
+  text-indent: 164rpx;
+  font-size:40rpx;
+  font-family:PingFang SC;
+  font-weight:600;
+  line-height:56rpx;
+  color:rgba(51,51,51,1);
+}
+.befPrice{
+  font-size:24rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  line-height:34rpx;
+  text-decoration: line-through;
+  margin-left: 8rpx;
+  color:rgba(153,153,153,1);
+}
+
+.selected{
+  background:rgba(255,151,73,0.3);
+  border:1px solid rgba(255,151,73,1);
+  border-radius:6rpx;
+  box-sizing: border-box;
+  color:rgba(255,151,73,1) !important;
+}

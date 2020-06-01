@@ -1,0 +1,80 @@
+<wxs src="../../format.wxs" module="filters"></wxs>
+<view class="container">
+  <view class="header">
+    <view class='order-pay'>
+      <view class="iconfont icon-success"></view>
+      <view class='order-title'>订单支付成功</view>
+      <view class='order-price'>¥{{payMoney/100}}</view>
+    </view>
+    <view class='order-content'>
+      <view class='order-item'>
+        <text class='order-left'>订单状态：</text>
+        <text class='order-right order-status'>已支付</text>
+      </view>
+      <view class='order-item'>
+        <text class='order-left'>订单编号：</text>
+        <text class='order-right'>{{ordno}}</text>
+      </view>
+      <view class='order-item'>
+        <text class='order-left'>下单时间：</text>
+        <text class='order-right'>{{paytime}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="goods">
+    <view class="foods-wrapper">
+      <view class="food-list food-list-hook">
+        <!-- <view class="title">{{item.name}}</view> -->
+        <view class="food-item" wx:key="{{carArray}}" wx:for="{{carArray}}" wx:for-index="index">
+          <view class="icon">
+            <image src="{{baseImgurl}}{{item.imgurl}}" class="icon-img"></image>
+          </view>
+          <view class="content">
+            <view class='txt'>
+              <view class="name">{{item.goodsname}}</view>
+            </view>
+            <view class="price">
+              <view class="now"><text class='fuhao'>¥</text>{{item.price/100}}</view>
+            </view>
+            <!--数量-->
+            <view class="cartControl-wrapper">
+              <view class="cart-count">x{{item.amount}}</view>
+            </view>
+          </view>
+        </view>
+        
+        
+        
+       
+
+      </view>
+    </view>
+
+
+
+    <view class="pay">
+      <view class='pay-box'>
+        <view class='pay-count'>
+          <text class='pay-title'>小计</text>
+          <text class='pay-numb'>{{totalPrice}}元</text>
+        </view>
+        <view class='pay-count' wx:if="{{cooupDiscont>0}}">
+          <text class='pay-title'>兑换券优惠</text>
+          <text class='pay-numb'>-{{cooupDiscont}}元</text>
+        </view>
+          <view class='pay-count' wx:if="{{discount>0}}">
+          <text class='pay-title'>积分优惠</text>
+          <text class='pay-numb'>-{{}}元</text>
+        </view>
+      </view>
+      <view class='pay-money'>实付金额：
+        <text class='pay-price'>{{filters.fnToFixed(totalPrice-discount -cooupDiscont)}}元</text>
+      </view>
+      <view class='pay-btn' catchtap="pay">返回首页</view>
+    </view>
+
+
+  </view>
+
+</view>

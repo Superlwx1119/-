@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-icon": "../../weui-miniprogram/icon/icon"
+  },
+  "navigationStyle": "default",
+  "navigationBarTitleText": "发表评论",
+  "navigationBarTextStyle": "black"
+}

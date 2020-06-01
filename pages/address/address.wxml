@@ -1,0 +1,24 @@
+<view class="box">
+  <view wx:if="{{addressList.length == 0}}" class="noAddressBox">
+    <view class="noAddress">
+      <image  src="../images/noAddress.svg"></image>
+      <text>暂无地址信息</text>
+      <text>请点击底部按钮添加地址</text>
+    </view>
+  </view>
+  <view wx:else >
+    <view bindtap="{{type == 'select' ? 'selectAddress' : ''}}" data-item="{{item}}" data-index="{{index}}" class="addressList background" wx:for="{{addressList}}" wx:key="index">
+      <view class="msg" >
+        <view>
+          <text class="customerName">{{item.customerName}}</text>
+          <text class="phone">{{item.phone}}</text>
+          <text class="moren" wx:if="{{index == 0}}">默认</text>
+        </view>
+        <text class="address">{{item.address}}{{item.area}}</text>
+      </view>
+      <view class="edit" catchtap="editAddress" data-index="{{index}}" data-id="{{item.customerAddressId}}">编辑</view>
+      <!-- <view class="edit" wx:if="{{type == 'select'}}" bindtap="selectAddress" data-item="{{item}}" data-index="{{index}}" data-id="{{item.customerAddressId}}">选择</view> -->
+    </view>
+  </view>
+  <button class="addAddress" bindtap="add"> + 添加地址</button>
+</view>

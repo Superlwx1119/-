@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-actionSheet": "../../weui-miniprogram/actionsheet/actionsheet"
+  },
+  "navigationStyle": "default",
+  "navigationBarTitleText": "提交退款",
+  "navigationBarTextStyle": "black"
+}

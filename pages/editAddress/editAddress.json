@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-dialog": "../../weui-miniprogram/dialog/dialog"
+  },
+  "navigationStyle": "default",
+  "navigationBarTitleText": "编辑收货地址",
+  "navigationBarTextStyle": "black"
+}

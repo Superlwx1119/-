@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-tabs": "../../weui-miniprogram/tabs/index"
+  },
+  "navigationStyle": "default",
+  "navigationBarTitleText": "我的卡券",
+  "navigationBarTextStyle": "black"
+}

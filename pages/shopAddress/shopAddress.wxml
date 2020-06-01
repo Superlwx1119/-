@@ -1,0 +1,11 @@
+<view class="box">
+  <map class="map" markers="{{point}}" scale="14" show-location="true" longitude="{{point[0].longitude}}" latitude="{{point[0].latitude}}"  ></map>
+  <view class="shopMsg">
+    <view class="img">
+      <image src="{{shopInfo.logImage}}"></image>
+      <text>{{shopInfo.shopName}}</text>
+    </view>
+    <text class="scope">我距离店铺{{shopInfo.distance >=1000 ? (shopInfo.distance)/1000+'公里' : shopInfo.distance+'米'}} | 配送半径{{shopInfo.scope >=1000 ? shopInfo.scope/1000 +'公里' :shopInfo.scope + '米'}}</text>
+    <text class="address">{{shopInfo.position}}{{shopInfo.address}}</text>
+  </view>
+</view>

@@ -1,0 +1,44 @@
+<view class="box">
+  <view class="background code">
+    <text>{{orderInfo.insTime}}</text>
+    <text class="sendding" wx:if="{{orderInfo.status == 200}}">配送中</text>
+    <text class="noPay" wx:if="{{orderInfo.status == 100}}">付款剩余时间：{{orderInfo.remainTime}}分</text>
+    <text wx:if="{{orderInfo.status == 300}}">提货码：{{orderInfo.takeCode}}</text>
+  </view>
+  <view class="address background">
+    <view wx:if="{{orderInfo.customerName&&orderInfo.customerName!=''}}">收货人：{{orderInfo.customerName}}</view>
+    <view wx:if="{{orderInfo.address&&orderInfo.address!=''}}">收货地址：{{orderInfo.address}} <image src="../images/position.svg"></image></view>
+    <view>收货电话：{{orderInfo.phone}} <image src="../images/phone.svg"></image></view>
+  </view>
+  <view class="goodsMsg background">
+    <view class="goodsList" wx:for="{{orderInfo.orderGoods}}" wx:if="{{down ? index>=0 : index<=1}}" wx:key="index">
+      <image src="{{item.imagePath}}"></image>
+      <view class="goodMsg">
+        <text>{{item.goodsName}}</text>
+        <!-- <text>{{item.buyNumber}}台</text> -->
+        <view class="msg">
+          <view class="money">
+            <text>￥{{item.actualPrice}}</text>
+            <text>￥{{item.oldPrice}}</text>
+          </view>
+          <text>x{{item.buyNumber}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="down" wx:if="{{!down}}" bindtap="showAll">
+      <image src="../images/down.svg"></image>
+    </view>
+  </view>
+  <view class="total background">
+    <view>
+      <text>共计{{orderInfo.buySum}}件商品</text>
+      <view>
+        <text>实付金额</text>
+        <text>￥{{orderInfo.totalFee}}</text>
+      </view>
+    </view>
+    <text class="orderCode">
+      订单号：{{orderInfo.orderId}}
+    </text>
+  </view>
+</view>

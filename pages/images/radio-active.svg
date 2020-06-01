@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#pattern);
+      }
+    </style>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 84 85">
+      <image width="84" height="85" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABVCAYAAADXN8NkAAAACXBIWXMAAC4jAAAuIwF4pT92AAAFHklEQVR4nO1dy00jQRCtXe0dMsAZ4AwggyWDNZe+4o0AyACufQEygAiwMzAZ4AxwBKxa+waNDK6q7q6Z6TH9JGRLzPdR3+6q4sf7+ztV2OFn5dIWlVBjVEKNUQk1RiXUGJVQY1RCjVEJNcavkh7Ge39KRFMimuCT8HnQOuyFiN7wfUFEr0S0cs6tBnjkTxg0U/LeB7ICiTMiOs683AYEP4Yf59yb4hxz9E6o9/6QiM6IaG5AIocnIrpxzi06vMcn9EYoiJzj50BxihXWRHTlnLvv42a9EOq9DyRe9UzkNpYgtlOJ7ZRQ2Mj7jlU7FrcgthMb2xmh3vsgkZedXDwfwQycdREZmBMKWxmk8nfC6eFFV/DW4fPtq5dGeHWIkCp8P0l83HNr22pKKMhcRKr4GqHOfY7EeO/PED38iTz1wTk3S73vNswIhb0MxBwpT+nE+yZGE2akmhCKlwgZi+YFegljWsRq7bgJqdmERqp5px72K0RGGtmkWhC6UDiFkBbOnHOPWTfLgPf+hoguFFfIclRZq00IjSQyw2LG6ZBkBjjngvqfKw69g1QnIVlCEbo8C4c1ZA6yUPEVvPdBpe+Ew4Kdn6Y8d5KEtmJNDsWRSf8l9V4hqUdIlaORqvJzITzaIBMpiswGSlIvUlQ/mlDv/UQRigQyX2Ov3SdA6oNwy5vYR0qRUEkVrvteg8zAHKZpF07gK9SIIhTSyaV2a+dcku0ZAjBJc+HWUe8TK6FS0GuWE/cFaBOn+icxtjSWUO6vuRyRqm9DkkJJij+gJhSrOVyuPhpV3wYcKCelZ9prxUgod9GXEUtnA04gDiBQIqwIjQ4vSgOkdMk8lsrbqwiFUebUfdA83RBc9mdHqHCxZakZUQI4s3WMlJuFllAubBi77fwA1H7NHCKGT1pCJ8zv9oZQgHsfM0K5CxWdsyeAex8zld/pkEpfBEkAJ6GiY8qtD+XszbeESKjg2fZNOrOhkdDk/ZXvCA2hRVQGjwUioULQLnq974Zcp1RSmWIR0BK62fULTTo2MnChkZjEaAnl7Oi+OS0uKxShJZQLj6I2sUaArHULCwndG0KxCcn5BTHi0RLK/WVO9siOcsKx1ixTqghFZfFOxxSz51I4uPdQrarFhE3cqvzoto+3AXXn+gJUuxJWhEZXWBQIbqt4oy3HVBOKC3JqP9ptZPgATsvUe2axmRK3iTVmKZW6/NS7urGEShce3XYydnS5UvFlTLtPFKGKCotjlImPCVLhcKfFYpobXObUqPcJNDJwgXx0vVY0oZDSW+GwRenBPmrtpa6QaG1LXb67EvaTDkomFRokNS7cptRrJRGKFEwK5o9LJBVkSkSt+25aaApVJdVvSM1aErMC1HyhaKFMbrjIWrFHMxVXo04gdTV0jIro405B5t+crmiLuU2nClLDSzwPEVIF7UD7pKaJNvR6ZsXSVt3IU6UqEezTrOsC3YQ27zK6kRtEkkpdDVVp5eUxQ2PK6pdvkDi0ZY2U9TGnTqo10UHqBdhGmRMdGkBCHhPngKwh5e0RbJ+8LaKGCex3M3ckZYTRtXVf1XeditP0oprb8a7nNp3CBGjnkPSBJzjFcc1tagPS2veItm30El30PfvuJsFp5GL/Zt+10QprpJ77XCwxC6oXIhuUMD90Bi9tUXi2bM0PHaQYuJh/XQHJbcKgKUolJzukuJlyu2qFV0V0o9T/BWKMOtTaGJVQY1RCjVEJNUYl1BiVUGNUQo1RCbUEEf0DKfUOjSeaAukAAAAASUVORK5CYII="/>
+    </pattern>
+  </defs>
+  <rect id="供销小店icon-32" class="cls-1" width="20" height="20"/>
+</svg>

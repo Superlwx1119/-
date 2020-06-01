@@ -1,0 +1,7 @@
+var fnToFixed = function (num) {
+  num = num.toFixed(2);
+  return num;
+};
+module.exports = {
+  fnToFixed: fnToFixed
+}

@@ -1,0 +1,76 @@
+<view class="box">
+    <mp-tabs 
+      tabs="{{tabs}}" 
+      tab-class="tabs"
+      activeTab="{{activeTab}}" 
+      tab-underline-color="#57D679"
+      tab-inactive-text-color="#999999"
+      swiperClass="swiperClass"
+      bindtabclick="onTabCLick"
+      bindchange="onChange"
+      activeClass="tab-bar-title__selected"
+    >
+        
+    </mp-tabs>
+    <view class="tab-content" style="height:calc(100vh - 70rpx);" wx:if="{{activeTab == 0}}"  >
+      <scroll-view scroll-y="true" class="current" style="height:calc(100vh - 70rpx);">
+        <view class="coupon" wx:for="{{currentList}}" wx:key="index">
+          <image mode="widthFix" src="../images/bigCoupon.svg"></image>
+          <view>
+            <view class="moneyAndName">
+              <text class="num">￥{{item.couponMoney}}</text>
+              <view>
+                <text>{{item.couponName}}</text>
+                <text class="time">有效期 {{item.startTime}}-{{item.endTime}}</text>
+              </view>
+            </view>
+          </view>
+          <text class="getIt" bindtap="getCoupon" data-couponId="{{item.couponId}}">立即使用</text>
+        </view>
+        <!-- <view class="coupon">
+          <image mode="widthFix" src="../images/bigCoupon.svg"></image>
+          <view>
+            <view class="moneyAndName">
+              <text class="num">￥7</text>
+              <view>
+                <text>新店开业优惠券</text>
+                <text class="time">有效期 2020.03.09-2020.04.30</text>
+              </view>
+            </view>
+          </view>
+          <text class="getIt canGet">未到使用时间</text>
+        </view> -->
+      </scroll-view>
+      
+    </view>
+    <view class="tab-content" style="height:calc(100vh - 70rpx);" wx:if="{{activeTab == 1}}" >
+      <scroll-view scroll-y="true" style="height:calc(100vh - 70rpx);" class="current">
+        <view class="coupon failure"  wx:for="{{failList}}" wx:key="index">
+          <image mode="widthFix" src="../images/couponEmpty.svg"></image>
+          <view>
+            <view class="moneyAndName">
+              <text class="num">￥{{item.couponMoney}}</text>
+              <view>
+                <text>{{item.couponName}}</text>
+                <text class="time">有效期 {{item.startTime}}-{{item.endTime}}</text>
+              </view>
+            </view>
+          </view>
+          <text class="getIt" >已失效</text>
+        </view>
+        <!-- <view class="coupon failure">
+          <image mode="widthFix" src="../images/couponEmpty.svg"></image>
+          <view>
+            <view class="moneyAndName">
+              <text class="num">￥7</text>
+              <view>
+                <text>新店开业优惠券</text>
+                <text class="time">有效期 2020.03.09-2020.04.30</text>
+              </view>
+            </view>
+          </view>
+          <text class="getIt">已失效</text>
+        </view> -->
+      </scroll-view>
+    </view>
+  </view>

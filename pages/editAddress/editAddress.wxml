@@ -1,0 +1,31 @@
+<view class="box">
+  <view class="form background">
+    <view>
+      <text>收货人</text>
+      <input placeholder="姓名" bindinput="bindKeyInput" data-type="name" value="{{name}}"></input>
+    </view>
+    <view>
+      <text>联系方式</text>
+      <input placeholder="手机号码" bindinput="bindKeyInput" data-type="phone" value="{{phone}}"></input>
+    </view>
+    <view>
+      <text>省市区</text>
+      <view class="map" bindtap="bindRegionChange">{{region == '' ? '请选择地址' : region}}</view>
+    </view>
+    <view class="last">
+      <text>详细地址</text>
+      <input placeholder="详细地址" bindinput="bindKeyInput" data-type="address"  value="{{address}}"></input>
+    </view>
+    <view class="last btn">
+      <button class="delate" bindtap="delAddress">删除</button>
+      <button class="save" bindtap="saveAddress">保存</button>
+    </view>
+  </view>
+  <view class="setMoren background">
+    <text>设为默认地址</text>
+    <switch checked="{{switch1Checked}}" bindchange="switch1Change"/>
+  </view>
+  <mp-dialog title="提示" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+      <view>是否删除该地址?</view>
+  </mp-dialog>
+</view>

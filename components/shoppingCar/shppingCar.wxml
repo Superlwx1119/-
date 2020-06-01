@@ -1,0 +1,99 @@
+<view>
+<!-- <view class="salesTips" wx:if="{{msgOfCar.befPrice!=0 && cha != 0 && msgOfCar.befPrice}}">还差{{cha}}减{{jian}}</view> -->
+
+<mp-halfScreenDialog 
+  bindbuttontap="buttontap"
+  extClass="selectSize"
+  show="{{show}}"
+  bindclose="closeDialog"
+  closabled="{{false}}"
+  maskClosable="{{true}}">
+    <view slot="desc">
+      
+      <view class="addDetail">
+          <image src="{{addDetail.imageMainList[0]}}"></image>
+          <view class="goodsMsg">
+            <text class="name">{{addDetail.goodsName}}</text>
+            <text class="introduce">{{addDetail.goodsSketch}}</text>
+            <view class="specifications">
+              <text >{{addDetail.specifications ? addDetail.specifications : '未选择规格'}}</text>
+            </view>
+            <view>
+              <text class="newPrice">￥{{addDetail.actualPriceGoods? addDetail.actualPriceGoods:addDetail.actualPrice}}</text>
+              <text wx:if="{{addDetail.oldPrice != addDetail.actualPrice}}" class="oldPrive">￥{{addDetail.oldPrice?addDetail.oldPrice:addDetail.oldPrice}}</text>
+            </view>
+          </view>
+          
+      </view>
+      <view class="number">
+        <text class="textSpeci">数量</text>
+        <view class="numDo">
+          <image bindtap="reductionNum" src="../../pages/images/Reduction.svg"></image>
+          <!-- <text>{{addDetail.count ? addDetail.count : 0}}</text> -->
+          <text>{{count}}</text>
+          <image bindtap="addNum" src="../../pages/images/add.png"></image>
+        </view>
+      </view>
+      <view class="selectSku" >
+        <view class="group" wx:for="{{addDetail.specsKeyList}}" wx:key="index">
+          <text class="textSpeci">{{item.specsKeyName}}</text>
+          <view class="groupOption">
+            <text wx:for-item="i" wx:for-index="s" bindtap="selectOne"  data-arrIndex="{{index}}" data-index="{{s}}" data-item="{{item}}" wx:key="specsKeyId" class="{{i.selected == true ? 'selected' : ''}}" wx:for="{{item.specsValueList}}">{{i.specsValueName}}</text>
+          </view>
+        </view>
+      </view>
+      <button class="addCar" bindtap="addShopCar">加入购物车</button>
+    </view>
+</mp-halfScreenDialog>
+<mp-halfScreenDialog 
+  bindbuttontap="buttontap"
+  show="{{showCar}}"
+  closabled="{{false}}"
+  maskClosable="{{true}}">
+  <view slot="title">
+    <view class="carTitle">
+      <text>已选商品</text>
+      <text class="clear" bindtap="clearCar">清空购物车</text>
+    </view>
+  </view>
+  <view slot="desc">
+    <scroll-view scroll-y="true" style="max-height:55vh;margin-bottom:144rpx">
+      <view wx:for="{{goodsInCar}}" wx:key="index">
+        <view class="addDetail" >
+          <image src="{{item.imageMainList[0]}}"></image>
+          <view class="goodsMsg">
+            <text class="name">{{item.goodsName}}</text>
+            <text class="introduce">{{item.goodsSketch}}</text>
+            <view class="specifications">
+              <text >{{item.skuName != '' ? '已选:' + item.skuName : '未选择规格'}}</text>
+            </view>
+            <view>
+              <text class="newPrice">￥{{item.actualPrice}}</text>
+              <text wx:if="{{item.actualPrice != item.oldPrice}}" class="oldPrive">￥{{item.oldPrice}}</text>
+            </view>
+          </view>
+          
+          </view>
+          <view class="number">
+            <text class="textSpeci">数量</text>
+            <view class="numDo">
+              <image bindtap="carReduction" data-item="{{item}}" data-index="{{index}}" src="../../pages/images/Reduction.svg"></image>
+              <text>{{item.count}}</text>
+              <image bindtap="carAdd" data-item="{{item}}" data-index="{{index}}" src="../../pages/images/add.png"></image>
+            </view>
+            </view> 
+      </view>
+      
+    </scroll-view>
+    <view class="total" slot="footer">
+      <view class="img" bindtap="checkCar">
+        <image src="../../pages/images/shopCar.svg"></image>
+        <text wx:if="{{msgOfCar.count!=0}}">{{msgOfCar.count}}</text>
+      </view>
+      <text class="finPrice">￥{{msgOfCar.curPrice}}</text>
+      <text wx:if="{{msgOfCar.curPrice != msgOfCar.befPrice}}" class="befPrice">￥{{msgOfCar.befPrice}}</text>
+      <view class="pay"  bindtap="toPay">去结算</view>
+    </view>
+  </view>
+</mp-halfScreenDialog>
+</view>

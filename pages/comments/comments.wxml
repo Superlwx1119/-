@@ -1,0 +1,72 @@
+<view class="box">
+  <view class="comment background">
+    <view class="goodsMsg">
+      <image src="{{orderInfo.imagePath}}"></image>
+      <view class="goodsText">
+        <text>{{orderInfo.goodsName}}</text>
+        <text>{{orderInfo.goodsSketch}}</text>
+        <text>{{orderInfo.skuName}}</text>
+      </view>
+    </view>
+    <view class="goodsComments">
+      <view class="star">
+        <text>商品评价</text>
+        <view  class="goodStars">
+          <!-- <view wx:for="{{flower}}" wx:key="index" bindtap="{{reviewId || (!reviewId && status == 10)  ? '':'getFlower'}}" data-index="{{index}}">
+            <image src="{{flowerIndex == index ? '../images/flowers.svg':'../images/flowersEmpty.svg'}}"></image>
+            <text class="{{flowerIndex == index ? 'selected':''}}">{{item.text}}</text>
+          </view> -->
+          <view bindtap="{{reviewId || (!reviewId && status == 10)  ? '':'getFlower'}}" data-index="0">
+            <image src="{{flowerIndex == 0 ? '../images/goodFlower.svg':'../images/goodFlowerEmpty.svg'}}"></image>
+            <text class="{{flowerIndex == 0 ? 'selected':''}}">好评</text>
+          </view>
+          <view bindtap="{{reviewId || (!reviewId && status == 10)  ? '':'getFlower'}}" data-index="1">
+            <image src="{{flowerIndex == 1 ? '../images/badFlower.svg':'../images/badFlowerEmpty.svg'}}"></image>
+            <text class="{{flowerIndex == 1 ? 'selected':''}}">中评</text>
+          </view>
+          <view bindtap="{{reviewId || (!reviewId && status == 10)  ? '':'getFlower'}}" data-index="2">
+            <image src="{{flowerIndex == 2 ? '../images/badFlower.svg':'../images/badFlowerEmpty.svg'}}"></image>
+            <text class="{{flowerIndex == 2 ? 'selected':''}}">差评</text>
+          </view>
+          <!-- <image bindtap="giveStars" data-index="{{index}}" data-type="goodStars" wx:for="{{goodStars}}" wx:key="index" src="{{item}}"></image> -->
+        </view>
+      </view>
+      <view class="text">
+        <text>图文评价</text>
+        <textarea class="textarea" disabled="{{reviewId || (!reviewId && status == 10) ? true : false }}" value="{{comment}}" bindinput="toComment"  placeholder="在这里填写您对自己购买的商品的评价" />
+      </view>
+      <view class="upFiles">
+          <view class="upBox files" wx:for="{{fileList}}" wx:key="index">
+            <icon wx:if="{{!(reviewId || (!reviewId && status == 10))}}"  type="cancel" bindtap="deleteImg" class="closeFile" data-index="{{index}}" size="14" color="black"/>
+            <!-- <mp-icon icon="close" bindtap="deleteImg" class="closeFile" color="white" size="{{16}}"></mp-icon> -->
+            <image bindtap="showBigImg" data-index="{{index}}" mode="aspectFill"   src="{{item}}"></image>
+          </view>
+          <view class="upBox">
+            <view wx:if="{{fileList.length<5 && !(reviewId || (!reviewId && status == 10))}}" class="doUpload" bindtap="selectPhoto">
+              <image src="../images/Camera.svg"></image>
+              <text>上传照片</text>
+              <text>(最多5张)</text>
+            </view>
+          </view>
+          
+      </view>
+    </view>
+  </view>
+  <view class="shopComments background">
+    <text>店铺评价</text>
+    <view>
+      <text>描述相符</text>
+      <image bindtap="{{reviewId || (!reviewId && status == 10) ? '':'giveStars'}}" data-index="{{index}}" data-type="describeStars" wx:for="{{describeStars}}" wx:key="index" src="{{item}}"></image>
+    </view>
+    <view>
+      <text>配送服务</text>
+      <image bindtap="{{reviewId || (!reviewId && status == 10) ? '':'giveStars'}}" data-index="{{index}}" data-type="sendStars" wx:for="{{sendStars}}" wx:key="index" src="{{item}}"></image>
+    </view>
+    <view>
+      <text>服务态度</text>
+      <image bindtap="{{reviewId || (!reviewId && status == 10) ? '':'giveStars'}}" data-index="{{index}}" data-type="serveStars" wx:for="{{serveStars}}" wx:key="index" src="{{item}}"></image>
+    </view>
+  </view>
+  <view class="submit" wx:if="{{reviewId && status == 0}}" bindtap="deleteComment">删除</view>
+  <view class="submit" wx:if="{{!reviewId && status != 10}}" bindtap="reviewInfoSave">提交</view>
+</view>

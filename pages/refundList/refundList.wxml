@@ -1,0 +1,31 @@
+<view class="box">
+  <view wx:if="{{goodsList.length == 0}}" class="noGoods">
+    <image src="../images/orderBeClose.svg"></image>
+    <text>订单已关闭</text>
+    <text>请联系商家处理</text>
+    <button open-type="contact" bindcontact="handleContact">联系商家</button>
+  </view>
+  <view wx:else>
+    <view class="goodsDetail background" bindtap="selectGoods" data-index="{{index}}"  wx:for="{{goodsList}}" wx:key="skuId">
+      <image  src="{{item.selected ? '../images/bingo.svg':'../images/bingoEmpty.svg'}}"></image>
+      <view class="goodsMsg">
+        <image src="{{item.imagePath}}"></image>
+        <view>
+          <view>
+            <text class="name">{{item.goodsName}} </text>
+            <text class="sku">已选:{{item.skuName}} </text>
+          </view>
+          <!-- <text>美的多功能电热锅 </text> -->
+          <view class="num"><text>数量</text> <text>X{{item.refundableNum}}</text></view>
+        </view>
+      </view>
+    </view>
+    <view class="foot">
+      <view bindtap="selectAll">
+        <image src="{{selectAll ? '../images/bingo.svg' : '../images/bingoEmpty.svg'}}"></image>
+        <text>全选</text>
+      </view>
+      <view class="btnSure" bindtap="toRefund">确定</view>
+    </view>
+  </view>
+</view>

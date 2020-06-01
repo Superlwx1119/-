@@ -1,0 +1,62 @@
+<mp-navigation-bar color="white" title="退款售后"  background="#57D679" back="{{true}}"></mp-navigation-bar>
+<view class="box" style="height:calc(100vh - {{top}}px);">
+    <mp-tabs 
+      tabs="{{tabs}}" 
+      tab-class="tabs"
+      activeTab="{{activeTab}}" 
+      tab-underline-color="#57D679"
+      tab-inactive-text-color="#999999"
+      swiperClass="swiperClass"
+      bindtabclick="onTabCLick"
+      bindchange="onChange"
+      activeClass="tab-bar-title__selected">
+        
+    </mp-tabs>
+    <view class="tab-content" wx:if="{{activeTab == 0}}" style="height:calc(100vh - {{top}}px - 70rpx);"  slot="tab-content-0" >
+      <scroll-view scroll-y="true" class="current" style="height:calc(100vh - {{top}}px - 70rpx);">
+        <view wx:for="{{refundsList}}" wx:key="index" class="goodsMsg background">
+          <view class="state">
+            <text >{{item.refundsType == 10 ? '退货退款' : '仅退款'}}</text>
+            <view class="{{item.status == 1000 ? 'statusA':''}}">{{item.statusValue}}</view>
+          </view>
+          <view class="refundMsg" data-refundsId="{{item.refundsId}}" data-refundsType="{{item.refundsType}}" bindtap="refundDetail" wx:for="{{item.refundGoodsListToCus}}" wx:key="index" wx:for-item="goodsMsg">
+            <image class="goodImg" src="{{goodsMsg.imagePath}}"></image>
+            <view class="goodsText">
+              <text class="goodsName">{{goodsMsg.goodsName}}</text>
+              <text> </text>
+              <text>{{goodsMsg.skuName}}</text>
+              <view class="reNum">
+                <text>退款数量</text>
+                <text>x{{goodsMsg.refundsNumber}}</text>
+              </view>
+            </view>
+          </view>
+          
+        </view>
+      </scroll-view>
+      
+    </view>
+    <view class="tab-content" wx:if="{{activeTab == 1}}" style="height:calc(100vh - {{top}}px - 70rpx);" slot="tab-content-1" >
+      <scroll-view scroll-y="true" class="current" style="height:calc(100vh - {{top}}px - 70rpx);">
+        <view wx:for="{{refundsList}}" wx:key="index" class="goodsMsg background">
+          <view class="state">
+            <text >{{item.refundsType == 10 ? '退货退款' : '仅退款'}}</text>
+            <view class="{{item.status == 0 ? 'statusC':''}} {{item.status == 2000 ? 'statusR' : ''}}">{{item.statusName}}</view>
+          </view>
+          <view class="refundMsg" data-refundsId="{{item.refundsId}}" data-refundsType="{{item.refundsType}}" bindtap="refundDetail" wx:for="{{item.refundGoodsListToCus}}" wx:key="index" wx:for-item="goodsMsg">
+            <image class="goodImg" src="{{goodsMsg.imagePath}}"></image>
+            <view class="goodsText">
+              <text class="goodsName">{{goodsMsg.goodsName}}</text>
+              <text> </text>
+              <text>{{goodsMsg.skuName}}</text>
+              <view class="reNum">
+                <text>退款数量</text>
+                <text>x{{goodsMsg.refundsNumber}}</text>
+              </view>
+            </view>
+          </view>
+          
+        </view>
+      </scroll-view>
+    </view>
+  </view>

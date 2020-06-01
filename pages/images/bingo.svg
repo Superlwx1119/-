@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="21" viewBox="0 0 20 21">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#pattern);
+      }
+    </style>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 84 85">
+      <image width="84" height="85" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABVCAYAAADXN8NkAAAACXBIWXMAAC4jAAAuIwF4pT92AAAFhElEQVR4nO2dPWwURxTH/4lSARJpSOhsCapQkCZVChOtlEg0WAnRdtxRxik4RUCqEEyqQBRBEVPGR3fKh3CDBNJJ54IqkeJrqBLp3EVJQySgdfR2ZmX73pv9nNmvm590BbPnY/3zm3mzb2fnXtvb24PHHq97l3bxQi3jhVrGC7XMG404izA4B4Bey/r1LoDj7H2HmQJ4DmACYCd6jcYz9q6KqSfLhwFJW9WvFXa8OLsAHkaSR+OHVf9aqFRoGLypBQ4AnGXH7RPLvVtl5LoXqkQO9CutG7tiS4uduP6P3Althsh5tqLzcRixboSGwWoUEcASO9YM1nXEPrd9NnaFqqjcBHCBHWseu9GYPhrv2Dwze/PQMKCpzqwlMqF7zx8Ig5vsSAnsRGgY9AH8yNrbw1CPraWHgPJCw4DGyiusvX1Mo4uLklLLCQ0DGi97rL29lJZafAztnkzoC46JTq6FKCZUdfOuyYwpJTW/UJWAujBmJnFWT/9yk0+omhq1OZvn4UKRKVX2pKS6wE6Dr35c8UGeGkCeCL25gDIRdf0c42k2oaoA3PVx08SSDqZMZI3QQgN0h7iigyqVdKFhMFjQrj5PpihNTkpq7Jg1qJ5ZN6kJKi1C+17mIVKjNE3ogLUsNitpY6n5NrKqurd77Dx6DDj/CXDkGLB8Cth+DEwes7flpK9vXYuYhaofbDdXbwHvHLjB+uqFDaG9KFEbKlJyl1fJqC2Vd5ne54dlEhSpdlg1fYosNOEHWsG5j4DzH7s8U6Mfk9DEgbfRLJ8GPrvOz/DVS2C4wZoLYvTTLaEnTgJff8+aI4Y/ALM/WXNBjpuyPReq1h21L7tTRr92CzhylB3Czw9sJKN5MgpVK9/aByWhpVP8tH9/Cvw0ZM0WED11Q+inPWDlQ9aM3b+Ajdus2RLL0se0Xyhl9IuXWHOUhO7cAF6+YIcsIa4glIQWvuNXOZTRqatLrH8B/Pu3cMAiQuG5vUIpCV01JKH7t21m9CRYb5aEiqHcOGh6dOJtflbbT1xk9MwkXcuXhy79zhz4I/721E7krH0pZ/RnU2DjW9ZcJW6FvnXycMKgyg+NbWWk0meYMvp3N1hz1Uhd3h7/zCUFGu+oq1IyKQJFfG+N/yBldJoeucvoman+OaVY6nvvs0OJ0B/h2jfyO6ibV5OEUpGETllLUagb0msekkoZmuaQWaCMvnZdzuhU8KCxuSFIQsXCaSGoC9KYKUklqCqURSrJl5IQZfRHv7DmCmHLyd0KxQGp9MtLpEmVCsXQ0U8VpDoRqvaSUGa9NCSVxrm8Uk2FYkpC9EeqNwmJQ2M1QmPySE0qFNcvE3q9AkOah7oTCuxPvKW5JAlcOq3GxWoKxWUQPckrR8Jg5rzITFc7klToKJQy+qNf6x839xFXkUhdHkn3na1BkUqCJCSZVChujsz/JJmoVSh0972foQDstlBcBKMfk9DqnjWnylCSVPeF4iIY/chC1fxqi7W7Iknqna/cF4rzk1OootpFtrFUikjoyKR/PxOne3UylCb0MXKWj6ki20vQlRGNm83q5jFido9JilDoZ96rh6KymTK3k2Qig9DNaIrgiSm54FaNFVafJ28xqdGJTAXm0fiu3v1g0ckUWFkr9u1ffFuOe1mfpssmVH3YPda+GOy6ePAL+kMXsev3k+ad82QXqj7UuHK3o6zn3Twr311PtSXPZdbeTbYwGuee4eS/jTwaby7AeDotmoiTLz2T6OaeIyi7kUvxhQ6jcV/vd9QlatwVZ19qV7q/lX2byi/FGY0HHUhUQxsyYXUzQbXBy6SFTy+vF8nmJvzujJZ3Z/T7h1rG73BrGb8Hs2X8LuGW8fvYW6YZX//jv2nBY8J/uYplvFDLeKGW8UJtAuB/li3yJLJpXmsAAAAASUVORK5CYII="/>
+    </pattern>
+  </defs>
+  <rect id="未标题-1_画板_1_副本" data-name="未标题-1_画板 1 副本" class="cls-1" width="20" height="21"/>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 68 68">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#pattern);
+      }
+
+      .cls-2 {
+        filter: url(#供销小店icon-61);
+      }
+    </style>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 85 84">
+      <image width="85" height="84" xlink:href="data:image/png;base64,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"/>
+    </pattern>
+    <filter id="供销小店icon-61" x="0" y="0" width="68" height="68" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#929292" flood-opacity="0.498"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-2" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <rect id="供销小店icon-61-2" data-name="供销小店icon-61" class="cls-1" width="50" height="50" transform="translate(9 6)"/>
+  </g>
+</svg>

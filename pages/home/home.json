@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "mp-icon": "../../weui-miniprogram/icon/icon",
+    "mp-sticky": "./../weui-miniprogram/sticky/index",
+    "shopCar":"../../components/shopCar/shopCar",
+    "shoppingCar":"../../components/shoppingCar/shppingCar"
+  },
+  "enablePullDownRefresh": false,
+  "backgroundTextStyle": "dark",
+  "navigationStyle":"custom"
+}
